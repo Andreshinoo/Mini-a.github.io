@@ -1,0 +1,242 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo de la página */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    color: #4B0082; /* Púrpura */
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Encabezado */
+.header {
+    background: linear-gradient(to bottom, #4B0082 0%, #6a2e8f 50%, white 100%);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem 5rem 1rem;
+    position: relative;
+}
+
+/* Barra de navegación */
+.nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.nav-bar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-bar li {
+    list-style: none;
+}
+
+.nav-bar a {
+    text-decoration: none;
+    color: rgb(224, 9, 243);
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-bar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffd6f3;
+}
+
+/* Sección Hero */
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background-color: #f8f8ff;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #4B0082;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+
+.hero button {
+    background-color: #4B0082;
+    color: white;
+    border: none;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.hero button:hover {
+    background-color: #6a2e8f;
+    transform: scale(1.05);
+}
+
+/* Sección de Dedicatoria */
+.dedicatoria {
+    background: #f3f3f3;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.dedicatoria h2 {
+    font-size: 2rem;
+    color: #4B0082;
+    margin-bottom: 1rem;
+}
+
+.dedicatoria p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* Sección de Galería */
+.galeria {
+    padding: 4rem 2rem;
+    background: white;
+    text-align: center;
+}
+.galeria figcaption {
+    margin-top: 8px;
+    font-size: 0.95rem;
+    font-style: italic;
+    color: #8a2be2;
+  }
+  
+.galeria h2 {
+    font-size: 2rem;
+    color: #4B0082;
+    margin-bottom: 2rem;
+}
+
+.imagenes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.imagen {
+    width: 250px;
+    height: auto; /* permite que el figcaption se vea sin recortar */
+    border-radius: 20px;
+    overflow: visible; /* importante */
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.imagen:hover {
+    transform: scale(1.05);
+}
+
+/* Pie de página */
+.footer {
+    background-color: #4B0082;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.music-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6a2e8f;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s, background 0.3s;
+}
+
+/* Al pasar el mouse */
+.music-btn:hover {
+    background-color: #8f3ed7;
+    transform: scale(1.1);
+}
+
+/* Cuando está sonando */
+.music-btn.playing {
+    background: linear-gradient(45deg, #6a2e8f, #b266ff);
+    animation: pulse 1.5s infinite;
+}
+
+/* Animación de latido */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+    100% { transform: scale(1); }
+}
+.imagen {
+    width: 300px;
+    height: auto;
+    border-radius: 20px;
+    overflow: visible;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.imagen img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.imagen figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #6a2e8f;
+    font-style: italic;
+}
+
+.imagen img:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
